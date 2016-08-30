@@ -113,9 +113,9 @@ public class Ghosts
     {
 
         String player = (this.player == 1 ? "Player 1" : "Player 2");
-        String tipo = (this.type == 1 ? "Malo" : "Bueno");
+        String tipo = (this.type == 1 ? "1" : "2");
 
-        return "Posicion x = " + x + "\nPosicion y = " + y + "\nJugador = " + player + "\nTipo de fantasma = " + tipo + "\n";
-
+        //return "Posicion x = " + x + "\nPosicion y = " + y + "\nJugador = " + player + "\nTipo de fantasma = " + tipo + "\n";
+		return tipo;
     }
 }

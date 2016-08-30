@@ -1,6 +1,7 @@
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Arrays;
 
 import javax.swing.*;
 
@@ -14,11 +15,7 @@ import javax.swing.*;
  */
 public class ListenForButton implements ActionListener{
 
-	private boolean firstclic = true;
-	private int newx;
-	private int newy;
-	private int x;
-	private int y;
+
 
 	/**
 	 * Agrega un ActionListener a todos los botones en un JPanel panel
@@ -40,6 +37,8 @@ public class ListenForButton implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+
+
 
 		/**
 		 * MENU INICIO: BOTON SALIR
@@ -206,32 +205,39 @@ public class ListenForButton implements ActionListener{
 			JButton b = (JButton) e.getSource();
 			String key = b.getName();
 
+			System.out.println(key);
 
+
+			/*
 			try
 			{
 
-				if (firstclic == true)
+				if (Game.firstclic == true)
 				{
-					System.out.println("firstclic = " + firstclic);
-					x = Integer.parseInt(String.valueOf(key.charAt(0)));
-					y = Integer.parseInt(String.valueOf(key.charAt(2)));
-					firstclic = false;
+					System.out.println("PRIMER CLIC");
+					//x = Integer.parseInt(String.valueOf(key.charAt(0)));
+					//y = Integer.parseInt(String.valueOf(key.charAt(2)));
+					Game.firstclic = false;
 
 				}
 				else
 				{
-					System.out.println("firstclic = " + firstclic);
-					newx = Integer.parseInt(String.valueOf(key.charAt(0)));
-					newy = Integer.parseInt(String.valueOf(key.charAt(2)));
+					System.out.println("SEGUNDO CLIC");
+					//newx = Integer.parseInt(String.valueOf(key.charAt(0)));
+					//newy = Integer.parseInt(String.valueOf(key.charAt(2)));
 
-					Game.ghosts[x][y].moveGhost(newx, newy);
-					firstclic = true;
+					//Game.ghosts[x][y].moveGhost(newx, newy);
+					Game.firstclic = true;
+					//System.out.println(Arrays.deepToString(Game.ghosts));
 				}
 			}
 			catch (NullPointerException ex)
 			{
 				ErrorWindow.showException(ex);
 			}
+			*/
+
+
 
 
 

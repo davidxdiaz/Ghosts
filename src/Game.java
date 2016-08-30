@@ -9,7 +9,11 @@ import javax.swing.border.*;
 public class Game
 {
 
-
+    public static int newx;
+    public static int newy;
+    public static int x;
+    public static int y;
+    public static boolean firstclic = true;
     private static JPanel contentPane;
     public static JButton[][] squares = new JButton[6][6];
     private static final String COLUMNAS = "ABCDEF";
