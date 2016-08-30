@@ -39,7 +39,32 @@ public class ListenForButton implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 
 
-		//hello
+		/**
+		 * CREAR JUGADOR: BOTON ACEPTAR
+		 */
+		if (e.getSource() == SignUp.btnOk)
+		{
+			String passw = "";
+
+			for (char c: SignUp.txtpassw.getPassword())
+			{
+				passw += c;
+			}
+
+			if (Players.exists(SignUp.txtuser.getText()) == false)
+			{
+				Players.add(SignUp.txtuser.getText(), passw);
+				SignUp.hide();
+				Inicio.show();
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "EL USUARIO YA EXISTE");
+			}
+
+			Players.showPlayers();
+		}
+
 		/**
 		 * MENU INICIO: BOTON SALIR
 		 */
@@ -66,32 +91,6 @@ public class ListenForButton implements ActionListener{
 			Inicio.hide();
 			SignUp.show();
 
-		}
-
-		/**
-		 * CREAR JUGADOR: BOTON ACEPTAR
-		 */
-		if (e.getSource() == SignUp.btnOk)
-		{
-			String passw = "";
-
-			for (char c: SignUp.txtpassw.getPassword())
-			{
-				passw += c;
-			}
-
-			if (Players.exists(SignUp.txtuser.getText()) == false)
-			{
-				Players.add(SignUp.txtuser.getText(), passw);
-				SignUp.hide();
-				Inicio.show();
-			}
-			else
-			{
-				JOptionPane.showMessageDialog(null, "EL USUARIO YA EXISTE");
-			}
-
-			Players.showPlayers();
 		}
 
 		/**
@@ -145,6 +144,7 @@ public class ListenForButton implements ActionListener{
 		if (e.getSource() == MainMenu.btnPlay)
 		{
 			Game.show();
+
 		}
 		/**
 		 * MENU PRINCIPAL: BOTON CONFIG
@@ -198,50 +198,63 @@ public class ListenForButton implements ActionListener{
 		}
 
 
-		if (Game.frame.isActive())
+		try
 		{
-
-
-			JButton b = (JButton) e.getSource();
-			String key = b.getName();
-
-			System.out.println(key);
-
-
-			/*
-			try
+			if (Game.frame.isActive())
 			{
-
-				if (Game.firstclic == true)
+				JButton b = (JButton) e.getSource();
+				String key = b.getName();
+				try
 				{
-					System.out.println("PRIMER CLIC");
-					//x = Integer.parseInt(String.valueOf(key.charAt(0)));
-					//y = Integer.parseInt(String.valueOf(key.charAt(2)));
-					Game.firstclic = false;
+					if (Game.firstclic == true)
+					{
 
+						System.out.println("PRIMER CLIC");
+						Game.x = Integer.parseInt(String.valueOf(key.charAt(0)));
+						Game.y = Integer.parseInt(String.valueOf(key.charAt(2)));
+						System.out.println(Game.ghosts[Game.x][Game.y]);
+
+
+						if (Game.ghosts[Game.x][Game.y] != null)
+						{
+							Game.firstclic = false;
+						}
+						else
+						{
+							Game.firstclic = true;
+						}
+
+						//Game.paintGhosts();
+					}
+					else
+					{
+						System.out.println("SEGUNDO CLIC");
+						Game.newx = Integer.parseInt(String.valueOf(key.charAt(0)));
+						Game.newy = Integer.parseInt(String.valueOf(key.charAt(2)));
+
+						//Mueve el fantasma
+						Ghosts g = new Ghosts();
+						g = Game.ghosts[Game.x][Game.y];
+						Game.ghosts[Game.x][Game.y] = null;
+						Game.ghosts[Game.newx][Game.newy] = g;
+						Game.ghosts[Game.newx][Game.newy].setX(Game.newx);
+						Game.ghosts[Game.newx][Game.newy].setY(Game.newy);
+
+
+						Game.firstclic = true;
+						Game.paintGhosts();
+						Game.debugDialog();
+					}
 				}
-				else
+				catch (NullPointerException ex)
 				{
-					System.out.println("SEGUNDO CLIC");
-					//newx = Integer.parseInt(String.valueOf(key.charAt(0)));
-					//newy = Integer.parseInt(String.valueOf(key.charAt(2)));
-
-					//Game.ghosts[x][y].moveGhost(newx, newy);
-					Game.firstclic = true;
-					//System.out.println(Arrays.deepToString(Game.ghosts));
+					ErrorWindow.showException(ex);
 				}
 			}
-			catch (NullPointerException ex)
-			{
-				ErrorWindow.showException(ex);
-			}
-			*/
-
-
-
-
-
+		} catch (Exception ex)
+		{
 		}
+
 
 	}
 }

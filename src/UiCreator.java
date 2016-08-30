@@ -1,14 +1,15 @@
 
 import java.awt.*;
+import java.lang.reflect.Array;
 
 import javax.swing.*;
 
 public class UiCreator {
 	
-	
+
 	/**
-	 * <b>addComp</b> Es un metodo encargado de diseñar 
-	 * la interfaz grafica en un contenedor que utilice un 
+	 * <b>addComp</b> Es un metodo encargado de diseñar
+	 * la interfaz grafica en un contenedor que utilice un
 	 * <b>GridBagLayout</b>
 	 * @param panel es el panel que contiene al componente
 	 * @param comp el componente que se desea agregar
@@ -20,7 +21,6 @@ public class UiCreator {
 	 * @param stretch de que manera se estira el componente
 	 * @see GridBagLayout
 	 */
-	
 	public static void addcomp(
             JPanel panel, JComponent comp, int xpos, int ypos,
             int compWidth, int compHeigth, int place, int stretch)

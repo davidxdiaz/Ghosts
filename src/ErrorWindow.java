@@ -107,6 +107,7 @@ public class ErrorWindow
 	}
 
 
+
 	public static void main(String[] args)
 	{
 		ErrorWindow.showException(new NullPointerException());

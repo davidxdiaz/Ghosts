@@ -44,6 +44,14 @@ public class Ghosts
      */
     private int type;
 
+	public Ghosts()
+	{
+		this.x = 0;
+		this.y = 0;
+		this.player = 0;
+		this.type = 0;
+	}
+
     public Ghosts(int x, int y, int player, int type) {
         this.x = x;
         this.y = y;
@@ -105,7 +113,22 @@ public class Ghosts
 
 	public int getType()
 	{
-		return type;
+		int t = 0;
+
+		switch (type)
+		{
+			case 1:
+				t = 1;
+				break;
+			case 2:
+				t = 2;
+				break;
+			default:
+				t = 0;
+				break;
+		}
+
+		return t;
 	}
 
 	@Override
@@ -113,9 +136,8 @@ public class Ghosts
     {
 
         String player = (this.player == 1 ? "Player 1" : "Player 2");
-        String tipo = (this.type == 1 ? "1" : "2");
+        String tipo = (this.type == 1 ? "Malo" : "Bueno");
 
-        //return "Posicion x = " + x + "\nPosicion y = " + y + "\nJugador = " + player + "\nTipo de fantasma = " + tipo + "\n";
-		return tipo;
+        return "Posicion x = " + x + "\nPosicion y = " + y + "\nJugador = " + player + "\nTipo de fantasma = " + tipo + "\n";
     }
 }

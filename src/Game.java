@@ -1,5 +1,8 @@
 
 import java.awt.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
@@ -8,7 +11,6 @@ import javax.swing.border.*;
 
 public class Game
 {
-
     public static int newx;
     public static int newy;
     public static int x;
@@ -21,6 +23,12 @@ public class Game
     public static JFrame frame;
     public static String status = "";
     public static Ghosts[][] ghosts = new Ghosts[6][6];
+    public static ImageIcon icon_bad;
+    public static ImageIcon icon_good;
+
+
+
+
     //TODO crear arreglo de Ghosts y agregar a los botones
 
     public static void hide()
@@ -30,6 +38,24 @@ public class Game
 
     public static void show()
     {
+
+
+        try
+        {
+            Image image = ImageIO.read(Game.class.getResource("/res/bad.png"));
+            Image image_bad = image.getScaledInstance(55,55,Image.SCALE_SMOOTH);
+            icon_bad = new ImageIcon(image_bad);
+
+            Image image2 = ImageIO.read(Game.class.getResource("/res/good.png"));
+            Image image_good = image2.getScaledInstance(55,55,Image.SCALE_SMOOTH);
+            icon_good = new ImageIcon(image_good);
+
+
+        } catch (IOException e)
+        {
+            ErrorWindow.showException(e);
+        }
+
         /**
          * CAMBIAR LOOKANDFEEL
          */
@@ -236,10 +262,8 @@ public class Game
                 {
                     try
                     {
-                        Image image = ImageIO.read(Game.class.getResource("/res/good.png"));
-                        Image newimage = image.getScaledInstance(55,55,Image.SCALE_SMOOTH);
-                        squares[x][y].setIcon(new ImageIcon(newimage));
-                        //
+                        squares[x][y].setIcon(icon_good);
+
                     }
                     catch (Exception e)
                     {
@@ -251,14 +275,16 @@ public class Game
                 {
                     try
                     {
-                        Image image = ImageIO.read(Game.class.getResource("/res/bad.png"));
-                        Image newimage = image.getScaledInstance(55,55,Image.SCALE_SMOOTH);
-                        squares[x][y].setIcon(new ImageIcon(newimage));
+                        squares[x][y].setIcon(icon_bad);
                     }
                     catch (Exception e)
                     {
                         ErrorWindow.showException(e);
                     }
+                }
+                else
+                {
+                    squares[x][y].setIcon(null);
                 }
             }
         }
@@ -271,6 +297,40 @@ public class Game
         int randomNum = rand.nextInt((max - min) + 1) + min;
 
         return randomNum;
+    }
+
+    public static void debugDialog()
+    {
+        JDialog dialog = new JDialog();
+        dialog.setTitle("DEBUG");
+
+        JTextArea textArea = new JTextArea();
+
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+
+        for (int x = 0; x < Game.ghosts.length; x++)
+        {
+            for (int y = 0; y < Game.ghosts[x].length; y++)
+            {
+                if (Game.ghosts[x][y] != null)
+                {
+                    pw.write(Game.ghosts[x][y].getType() + "\t");
+                }
+                else
+                {
+                    pw.write(0 + "\t");
+                }
+            }
+            pw.write("\n");
+        }
+
+        textArea.setText(sw.toString());
+        dialog.add(textArea);
+        dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        dialog.pack();
+        dialog.setLocationRelativeTo(null);
+        dialog.setVisible(true);
     }
 
 }
