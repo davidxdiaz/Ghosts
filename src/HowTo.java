@@ -13,7 +13,7 @@ public class HowTo
 	public static JTextPane textPane;
 	public static JScrollPane scroll;
 	public static StyledDocument doc;
-	public static String contents = "res/contents.html";
+	public static String contents = "src/res/contents.html";
 
 	public static void hide()
 	{
@@ -61,7 +61,7 @@ public class HowTo
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.add(panel);
 		frame.setSize(1024,720);
-		frame.setResizable(false);
+		//frame.setResizable(false);
 		//frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);

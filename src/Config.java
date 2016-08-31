@@ -20,6 +20,7 @@ public class Config
 
 	public static void show()
 	{
+		//Cambiar Look and feel
 		try
 		{
 			UIManager.setLookAndFeel("com.alee.laf.WebLookAndFeel");
@@ -27,7 +28,9 @@ public class Config
 		{
 			// TODO: handle exception
 		}
+
 		JFrame.setDefaultLookAndFeelDecorated(true);
+
 		frame = new JFrame("Configuracion");
 		panel = new JPanel(new MigLayout(
 				"", // Layout Constraints

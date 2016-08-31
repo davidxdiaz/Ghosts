@@ -9,44 +9,47 @@ import javax.swing.*;
 /**
  * Clase publica dedicada a escuchar las acciones de los botones
  * <p>
+ *
  * @author David
  * @version 1.1
  * @since 0.9
  */
-public class ListenForButton implements ActionListener{
-
+public class ListenForButton implements ActionListener
+{
 
 
 	/**
 	 * Agrega un ActionListener a todos los botones en un JPanel panel
+	 *
 	 * @param panel : Objeto JPanel contenedor.
-	 * @param l : La instancia de ListenForButton
+	 * @param l     : La instancia de ListenForButton
 	 */
 	public static void addListeners(JPanel panel, ActionListener l)
 	{
 		// TODO Auto-generated method stub
-		for (Component c: panel.getComponents())
+		for (Component c : panel.getComponents())
 		{
 			if (c instanceof JButton)
 			{
-				((JButton)c).addActionListener(l);
+				((JButton) c).addActionListener(l);
 			}
 		}
 
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e)
+	{
 
 
-		/**
+		/*
 		 * CREAR JUGADOR: BOTON ACEPTAR
 		 */
 		if (e.getSource() == SignUp.btnOk)
 		{
 			String passw = "";
 
-			for (char c: SignUp.txtpassw.getPassword())
+			for (char c : SignUp.txtpassw.getPassword())
 			{
 				passw += c;
 			}
@@ -65,7 +68,7 @@ public class ListenForButton implements ActionListener{
 			Players.showPlayers();
 		}
 
-		/**
+		/*
 		 * MENU INICIO: BOTON SALIR
 		 */
 		if (e.getSource() == Inicio.btnExit)
@@ -74,7 +77,7 @@ public class ListenForButton implements ActionListener{
 
 		}
 
-		/**
+		/*
 		 * MENU INICIO: BOTON INICIAR SESION
 		 */
 		if (e.getSource() == Inicio.btnLogin)
@@ -83,7 +86,7 @@ public class ListenForButton implements ActionListener{
 			Login.show();
 		}
 
-		/**
+		/*
 		 * MENU INICIO: BOTON NUEVO JUGADOR
 		 */
 		if (e.getSource() == Inicio.btnNew)
@@ -93,7 +96,7 @@ public class ListenForButton implements ActionListener{
 
 		}
 
-		/**
+		/*
 		 * CREAR JUGADOR: BOTON CANCEL
 		 */
 		if (e.getSource() == SignUp.btnCancel)
@@ -102,14 +105,14 @@ public class ListenForButton implements ActionListener{
 			Inicio.show();
 		}
 
-		/**
+		/*
 		 * INICIAR SESION: BOTON ACEPTAR
 		 */
 		if (e.getSource() == Login.btnOk)
 		{
 			String passw = "";
 
-			for (char c: Login.txtpassw.getPassword())
+			for (char c : Login.txtpassw.getPassword())
 			{
 				passw += c;
 			}
@@ -123,14 +126,14 @@ public class ListenForButton implements ActionListener{
 			else
 			{
 				JOptionPane.showMessageDialog(null, "Usuario y contraseña incorrectos.\n"
-						+ "Debe crear el usuario o intentar con otro usuario y contraseña",
+								+ "Debe crear el usuario o intentar con otro usuario y contraseña",
 						"Error", JOptionPane.ERROR_MESSAGE);
 			}
 
 
 		}
 
-		/**
+		/*
 		 * INICIAR SESION: BOTON CANCELAR
 		 */
 		if (e.getSource() == Login.btnCancel)
@@ -138,15 +141,14 @@ public class ListenForButton implements ActionListener{
 			Login.hide();
 			Inicio.show();
 		}
-		/**
+		/*
 		 * MENU PRINCIPAL: BOTON JUGAR
 		 */
 		if (e.getSource() == MainMenu.btnPlay)
 		{
 			Game.show();
-
 		}
-		/**
+		/*
 		 * MENU PRINCIPAL: BOTON CONFIG
 		 */
 		if (e.getSource() == MainMenu.btnConfig)
@@ -154,7 +156,7 @@ public class ListenForButton implements ActionListener{
 			Config.show();
 		}
 
-		/**
+		/*
 		 * MENU PRINCIPAL: BOTON REPORTES
 		 */
 		if (e.getSource() == MainMenu.btnReport)
@@ -162,7 +164,7 @@ public class ListenForButton implements ActionListener{
 			Reportes.show();
 		}
 
-		/**
+		/*
 		 * MENU PRINCIPAL: BOTON COMOJUGAR
 		 */
 		if (e.getSource() == MainMenu.btnHowTo)
@@ -170,7 +172,7 @@ public class ListenForButton implements ActionListener{
 			HowTo.show();
 		}
 
-		/**
+		/*
 		 * MENU PRINCIPAL: BOTON CerrarSesion
 		 */
 		if (e.getSource() == MainMenu.btnLogout)
@@ -180,7 +182,7 @@ public class ListenForButton implements ActionListener{
 			Players.setLoggedPlayer(null);
 		}
 
-		/**
+		/*
 		 * MENU PRINCIPAL: BOTON PERFIL
 		 */
 
@@ -214,17 +216,19 @@ public class ListenForButton implements ActionListener{
 						Game.y = Integer.parseInt(String.valueOf(key.charAt(2)));
 						System.out.println(Game.ghosts[Game.x][Game.y]);
 
+						//if (Game.ghosts[Game.x][Game.y].getPlayer() == Game.turn)
+						//{
+							if (Game.ghosts[Game.x][Game.y] != null)
+							{
+								Game.firstclic = false;
+							}
+							else
+							{
+								Game.firstclic = true;
+							}
 
-						if (Game.ghosts[Game.x][Game.y] != null)
-						{
-							Game.firstclic = false;
-						}
-						else
-						{
-							Game.firstclic = true;
-						}
-
-						//Game.paintGhosts();
+							//Game.paintGhosts();
+						//}
 					}
 					else
 					{
@@ -245,8 +249,7 @@ public class ListenForButton implements ActionListener{
 						Game.paintGhosts();
 						Game.debugDialog();
 					}
-				}
-				catch (NullPointerException ex)
+				} catch (NullPointerException ex)
 				{
 					ErrorWindow.showException(ex);
 				}
@@ -344,7 +347,6 @@ class windowsEvent implements WindowListener
 		}
 
 
-
 	}
 
 	@Override
@@ -381,7 +383,6 @@ class windowsEvent implements WindowListener
 		// TODO Auto-generated method stub
 
 	}
-
 
 
 }

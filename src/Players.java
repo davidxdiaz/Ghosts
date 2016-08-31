@@ -116,6 +116,12 @@ public class Players {
 
 	}
 
+	/**
+	 * Valida los datos de un usuario, devuelve verdadero si estos estan correctos
+	 * @param user
+	 * @param passw
+	 * @return
+	 */
 	public static boolean verify(String user, String passw)
 	{
 		boolean b = false;
