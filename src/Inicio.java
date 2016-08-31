@@ -1,7 +1,11 @@
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import net.miginfocom.swing.MigLayout;
+
+import java.awt.*;
+import java.io.IOException;
 
 public class Inicio {
 	public static JPanel panel;
@@ -44,6 +48,15 @@ public class Inicio {
 		frame.setResizable(false);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
+		try
+		{
+			Image image = ImageIO.read(Game.class.getResource("/res/ghost.png"));
+			Image newimage = image.getScaledInstance(64, 64, Image.SCALE_SMOOTH);
+			frame.setIconImage(newimage);
+		} catch (IOException e)
+		{
+			e.printStackTrace();
+		}
 		frame.setVisible(true);
 	}
 

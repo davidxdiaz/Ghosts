@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="735d1698-2aa2-460e-84fd-ce02da54efcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/board.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/move.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/res/contents.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/ErrorWindow.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/ErrorWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Game.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Ghosts.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Ghosts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/HowTo.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/HowTo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/ListenForButton.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/ListenForButton.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Main.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Players.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Players.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/listenKey.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/listenKey.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/windowsEvent.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/windowsEvent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Config.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Config.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Config.java" afterPath="$PROJECT_DIR$/src/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HowTo.java" afterPath="$PROJECT_DIR$/src/HowTo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListenForButton.java" afterPath="$PROJECT_DIR$/src/ListenForButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Players.java" afterPath="$PROJECT_DIR$/src/Players.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Inicio.java" afterPath="$PROJECT_DIR$/src/Inicio.java" />
     </list>
     <ignored path="Ghosts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +64,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+            <state relative-caret-position="34">
+              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="46" selection-end-column="48" />
               <folding>
                 <element signature="method#Gui#0;class#Game#0" expanded="false" />
                 <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
@@ -90,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Config.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+            <state relative-caret-position="146">
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="75" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -104,11 +89,21 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding>
                 <element signature="e#62#63#0" expanded="true" />
                 <element signature="e#82#83#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Inicio.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Inicio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,7 +146,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Login.java" />
-        <option value="$PROJECT_DIR$/src/Inicio.java" />
         <option value="$PROJECT_DIR$/src/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/Reportes.java" />
         <option value="$PROJECT_DIR$/src/SignUp.java" />
@@ -172,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Config.java" />
+        <option value="$PROJECT_DIR$/src/Inicio.java" />
       </list>
     </option>
   </component>
@@ -259,6 +254,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ghosts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Ghosts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -696,7 +709,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472599919321</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Casi listo para revision">
+      <created>1472683854744</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1472683854744</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -772,7 +792,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="fixed first and second button event" />
     <MESSAGE value="Listo para Revision" />
-    <option name="LAST_COMMIT_MESSAGE" value="Listo para Revision" />
+    <MESSAGE value="Casi listo para revision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Casi listo para revision" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -983,14 +1004,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/calc.java" />
-    <entry file="file://$PROJECT_DIR$/src/Inicio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SignUp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -1115,21 +1128,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="e#62#63#0" expanded="true" />
-            <element signature="e#82#83#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/res/ghost.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        <state relative-caret-position="34">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="46" selection-end-column="48" />
           <folding>
             <element signature="method#Gui#0;class#Game#0" expanded="false" />
             <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
@@ -1140,8 +1147,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        <state relative-caret-position="146">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="75" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="e#62#63#0" expanded="true" />
+            <element signature="e#82#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Inicio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding />
         </state>
       </provider>
