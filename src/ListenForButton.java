@@ -40,8 +40,6 @@ public class ListenForButton implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
-
-
 		/*
 		 * CREAR JUGADOR: BOTON ACEPTAR
 		 */
@@ -54,7 +52,7 @@ public class ListenForButton implements ActionListener
 				passw += c;
 			}
 
-			if (Players.exists(SignUp.txtuser.getText()) == false)
+			if (!Players.exists(SignUp.txtuser.getText()))
 			{
 				Players.add(SignUp.txtuser.getText(), passw);
 				SignUp.hide();

@@ -53,7 +53,7 @@ public class Login
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
-		frame.getRootPane().setDefaultButton(btnOk);
+		frame.getRootPane().setDefaultButton(btnOk); //Establece que cuando ENTER, el boton se presione
 
 	}
 

@@ -38,8 +38,6 @@ public class Game
 
 	public static void show()
 	{
-
-
 		try
 		{
 			Image image = ImageIO.read(Game.class.getResource("/res/bad.png"));
@@ -89,7 +87,7 @@ public class Game
 	public static void Gui()
 	{
 
-		contentPane = new JPanel();
+		contentPane = new JPanel(); //Panel principal
 		contentPane.setLayout(new BorderLayout());
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		JToolBar tools = new JToolBar();
@@ -102,8 +100,6 @@ public class Game
 		JPanel stats = new JPanel(new GridLayout(10, 2));
 		contentPane.add(stats, BorderLayout.LINE_START);
 
-
-		//TODO Continuar trabajando
 		do
 		{
 			playerTwo = JOptionPane.showInputDialog(null, "Ingrese jugador 2");
@@ -132,6 +128,7 @@ public class Game
 
 		} while (true);
 
+		//vengo del break
 
 		stats.add(new JLabel(
 				"JUGADOR 1: " + Players.getLoggedPlayer().toUpperCase()));
@@ -140,9 +137,10 @@ public class Game
 		panel = new JPanel(layout);
 		//panel.setBackground(new Color(139,69,19));
 		panel.setBorder(new LineBorder(Color.black));
-		generatePositions();
-		crearTablero(panel);
-		paintGhosts();
+
+		generatePositions(); //Genera las posiciones de los fantasmas
+		crearTablero(panel); //Crea el arreglo de botones
+		paintGhosts(); //Pintar iconos fantas
 		contentPane.add(panel);
 		/*
         for (int x = 0; x < ghosts.length; x++)

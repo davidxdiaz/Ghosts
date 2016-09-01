@@ -3,7 +3,7 @@
 public class Players {
 	private static String loggedPlayer;
 	private static String[][] players = new String[10][2]; //columna 0: user, columna 1: password
-	private static int index = 0;
+	private static int index = 0; //cuenta el numero de usuarios
 
 	/**
 	 * Metodo que añade un nuevo jugador a la lista de jugadores
@@ -17,7 +17,7 @@ public class Players {
 	public static void add(String user, String pass)
 	{
 		players[index][0] = user;
-		players[index][1] = pass == "" ? "password" : pass;
+		players[index][1] = pass.equals("") ? "password" : pass;
 		index++;
 	}
 
@@ -83,6 +83,7 @@ public class Players {
 	public static String getLoggedPlayer() {
 		return loggedPlayer;
 	}
+
 	/**
 	 * Funcion para obtener el numero de lista del usuario
 	 * @param user : Nombre de usuario
@@ -112,8 +113,6 @@ public class Players {
 		int index = getPlayerIndex(user);
 		players[index][0] = null;
 		players[index][1] = null;
-
-
 	}
 
 	/**

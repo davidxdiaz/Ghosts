@@ -39,6 +39,8 @@ public class SignUp
 		btnCancel = new JButton("Cancelar");
 		caps = new JLabel("<html><font color='red'>MAYUSC ACTIVADO</font></html>");
 		caps.setVisible(false);
+
+
 		panel.add(new JLabel("Usuario"));
 		panel.add(txtuser, "wrap, pushx, growx");
 		panel.add(new JLabel("Contraseña"));
@@ -48,6 +50,8 @@ public class SignUp
 		panel.add(btnCancel);
 
 		listenKey k = new listenKey();
+
+		//Limpia todos los textfiels y passwordfield
 		for (Component c: panel.getComponents())
 		{
 			if (c instanceof JTextField)

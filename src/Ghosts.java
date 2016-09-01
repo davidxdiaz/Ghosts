@@ -3,6 +3,7 @@
 public class Ghosts
 {
 
+
     /**
      * Pertenece a jugador 1
      */
@@ -21,12 +22,6 @@ public class Ghosts
      */
     public static final int TYPE_GOOD = 2;
 
-
-
-    /**
-     * Imagen perteneciente al fantasma
-     */
-   // private Image image;
     /**
      * Posicion x del fantasma
      */
@@ -48,33 +43,17 @@ public class Ghosts
 	{
 		this.x = 0;
 		this.y = 0;
-		this.player = 0;
-		this.type = 0;
+		this.player = 1;
+		this.type = 1;
 	}
 
-    public Ghosts(int x, int y, int player, int type) {
+    public Ghosts(int x, int y, int player, int type)
+    {
         this.x = x;
         this.y = y;
         this.player = player;
         this.type = type;
     }
-
-/*
-    public Ghosts(Image image, int x, int y, int player, int type) {
-        this.image = image;
-        this.x = x;
-        this.y = y;
-        this.player = player;
-        this.type = type;
-    }
-    */
-
-
-	public void moveGhost(int newx, int newy)
-	{
-		this.x = newx;
-		this.y = newy;
-	}
 
 	public void setX(int x)
 	{
