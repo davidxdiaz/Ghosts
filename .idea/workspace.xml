@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="735d1698-2aa2-460e-84fd-ce02da54efcf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListenForButton.java" afterPath="$PROJECT_DIR$/src/ListenForButton.java" />
     </list>
     <ignored path="Ghosts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -306,7 +304,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -764,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472886489206</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Crear jugador ahora inicia sesion automaticamente">
+      <created>1472941803156</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1472941803156</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -843,7 +848,8 @@
     <MESSAGE value="Casi listo para revision" />
     <MESSAGE value="Con Comentarios" />
     <MESSAGE value="Players delete actualizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Players delete actualizado" />
+    <MESSAGE value="Crear jugador ahora inicia sesion automaticamente" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crear jugador ahora inicia sesion automaticamente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
