@@ -199,10 +199,24 @@ public class ListenForButton implements ActionListener
 			Config.setConfig(Config.cboDif.getSelectedIndex(), Config.cboMode.getSelectedIndex());
 		}
 
+		/**
+		 * BOTON RENDIRSE: GAME
+		 */
+		if (e.getSource() == Game.ff)
+		{
+			System.out.println("SE RINDE");
+			int rendirse = JOptionPane.showConfirmDialog(null, "Seguro quiere rendirse?", "Rendirse?", JOptionPane.YES_NO_OPTION);
+			if (rendirse == JOptionPane.YES_OPTION)
+			{
+				Players.setWin(Game.playerTwo);
+				Game.hide();
+				Players.showPoints();
+			}
+		}
 
 		try
 		{
-			if (Game.frame.isActive())
+			if (Game.frame.isActive() && e.getSource() != Game.ff)
 			{
 				JButton b = (JButton) e.getSource();
 				String key = b.getName();
@@ -257,6 +271,7 @@ public class ListenForButton implements ActionListener
 		} catch (Exception ex)
 		{
 		}
+
 
 
 	}

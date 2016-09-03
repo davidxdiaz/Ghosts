@@ -2,8 +2,29 @@
 
 public class Players {
 	private static String loggedPlayer;
-	private static String[][] players = new String[10][3]; //columna 0: index columna 1: user, columna 2: password
+	private static String[][] players = new String[10][3];//columna 0: index columna 1: user, columna 2: password
+	private static int[][] puntos = new int[players.length][2];
 	private static int index = 0; //cuenta el numero de usuarios
+
+	public static void showPoints()
+	{
+		for (int x = 0; x < puntos.length; x++)
+		{
+		    for (int y = 0; y < puntos[x].length; y++)
+		    {
+			    System.out.print(puntos[x][y] + "\t");
+		    }
+			System.out.println();
+		}
+		
+	}
+
+	public static void setWin(String user)
+	{
+		int index = getPlayerIndex(user);
+
+		puntos[index][1] += 3;
+	}
 
 	/**
 	 * Metodo que añade un nuevo jugador a la lista de jugadores
@@ -19,6 +40,8 @@ public class Players {
 		players[index][0] = "" + index;
 		players[index][1] = user;
 		players[index][2] = pass.equals("") ? "password" : pass;
+		puntos[index][0] = index;
+		puntos[index][1] = 0;
 		index++;
 	}
 

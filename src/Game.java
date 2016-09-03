@@ -21,12 +21,13 @@ public class Game
 	private static final String COLUMNAS = "ABCDEF";
 	public static JPanel panel;
 	public static JFrame frame;
-	public static String status = "";
 	public static Ghosts[][] ghosts = new Ghosts[6][6];
 	public static ImageIcon icon_bad;
 	public static ImageIcon icon_good;
-	private static String playerTwo = "";
-	public static int turn = Ghosts.PLAYER_1;
+	public static String playerTwo = "";
+	public static boolean turn = false;
+	public static JButton ff; //ff significa Forfeit, o give up
+	public static JLabel lblstatus;
 
 
 	//TODO crear arreglo de Ghosts y agregar a los botones
@@ -76,7 +77,7 @@ public class Game
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		frame = new JFrame("Ghost Game");
 		frame.add(contentPane);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
@@ -86,7 +87,8 @@ public class Game
 
 	public static void Gui()
 	{
-
+		lblstatus = new JLabel("Listo para jugar");
+		ff = new JButton("Rendirse");
 		contentPane = new JPanel(); //Panel principal
 		contentPane.setLayout(new BorderLayout());
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -94,12 +96,13 @@ public class Game
 		tools.setFloatable(false);
 		contentPane.add(tools, BorderLayout.PAGE_START);
 		tools.addSeparator();
-		tools.add(new JButton("RENDIRSE")); // TODO - Agregar Funcionalidad
+		tools.add(ff);
 		tools.addSeparator();
-		tools.add(new JLabel("PREPARADO PARA JUGAR"));
+		tools.add(lblstatus);
 		JPanel stats = new JPanel(new GridLayout(10, 2));
 		contentPane.add(stats, BorderLayout.LINE_START);
-
+		ListenForButton l = new ListenForButton();
+		ff.addActionListener(l);
 		do
 		{
 			playerTwo = JOptionPane.showInputDialog(null, "Ingrese jugador 2");

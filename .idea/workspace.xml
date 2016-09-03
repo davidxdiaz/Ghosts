@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="735d1698-2aa2-460e-84fd-ce02da54efcf" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Ghosts/ListenForButton.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Ghosts/listenKey.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Ghosts/windowsEvent.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListenForButton.java" afterPath="$PROJECT_DIR$/src/ListenForButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Players.java" afterPath="$PROJECT_DIR$/src/Players.java" />
     </list>
     <ignored path="Ghosts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +32,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Players.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Players.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ListenForButton.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ListenForButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="245" column="21" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
               <folding>
                 <element signature="class#listenKey#0" expanded="false" />
                 <element signature="method#keyPressed#0;class#listenKey#0" expanded="false" />
@@ -48,44 +64,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Players.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Players.java">
+      <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pruebaplayers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pruebaplayers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contents.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/res/contents.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding>
-                <element signature="e#62#63#0" expanded="true" />
-                <element signature="e#82#83#0" expanded="true" />
+                <element signature="method#show#0;class#Game#0" expanded="false" />
+                <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
+                <element signature="method#generatePositions#0;class#Game#0" expanded="false" />
+                <element signature="method#paintGhosts#0;class#Game#0" expanded="false" />
+                <element signature="method#randInt#0;class#Game#0" expanded="false" />
+                <element signature="method#debugDialog#0;class#Game#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -133,12 +123,12 @@
         <option value="$PROJECT_DIR$/src/Login.java" />
         <option value="$PROJECT_DIR$/src/SignUp.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/Ghosts.java" />
         <option value="$PROJECT_DIR$/src/res/contents.html" />
-        <option value="$PROJECT_DIR$/src/Players.java" />
         <option value="$PROJECT_DIR$/src/pruebaplayers.java" />
         <option value="$PROJECT_DIR$/src/ListenForButton.java" />
+        <option value="$PROJECT_DIR$/src/Players.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
       </list>
     </option>
   </component>
@@ -769,7 +759,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472941803156</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Crear jugador ahora inicia sesion automaticamente">
+      <created>1472941833620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1472941833620</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -853,7 +850,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1218,29 +1215,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ghosts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="333" column="0" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
-          <folding>
-            <element signature="method#show#0;class#Game#0" expanded="false" />
-            <element signature="method#Gui#0;class#Game#0" expanded="false" />
-            <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
-            <element signature="method#generatePositions#0;class#Game#0" expanded="false" />
-            <element signature="method#paintGhosts#0;class#Game#0" expanded="false" />
-            <element signature="method#randInt#0;class#Game#0" expanded="false" />
-            <element signature="method#debugDialog#0;class#Game#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UiCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1260,14 +1234,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/pruebaplayers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="e#62#63#0" expanded="true" />
-            <element signature="e#82#83#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1279,26 +1250,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pruebaplayers.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding>
+            <element signature="e#62#63#0" expanded="true" />
+            <element signature="e#82#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ghosts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="method#show#0;class#Game#0" expanded="false" />
+            <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
+            <element signature="method#generatePositions#0;class#Game#0" expanded="false" />
+            <element signature="method#paintGhosts#0;class#Game#0" expanded="false" />
+            <element signature="method#randInt#0;class#Game#0" expanded="false" />
+            <element signature="method#debugDialog#0;class#Game#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Players.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="221">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ListenForButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="245" column="21" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
           <folding>
             <element signature="class#listenKey#0" expanded="false" />
             <element signature="method#keyPressed#0;class#listenKey#0" expanded="false" />
