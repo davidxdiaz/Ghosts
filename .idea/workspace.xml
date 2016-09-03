@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="735d1698-2aa2-460e-84fd-ce02da54efcf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pruebaplayers.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Ghosts.iws" />
@@ -687,7 +686,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472886276745</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Players delete actualizado">
+      <created>1472886420229</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1472886420229</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -765,7 +771,8 @@
     <MESSAGE value="Listo para Revision" />
     <MESSAGE value="Casi listo para revision" />
     <MESSAGE value="Con Comentarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Con Comentarios" />
+    <MESSAGE value="Players delete actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Players delete actualizado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
