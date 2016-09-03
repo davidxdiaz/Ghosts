@@ -56,7 +56,9 @@ public class ListenForButton implements ActionListener
 			{
 				Players.add(SignUp.txtuser.getText(), passw);
 				SignUp.hide();
-				Inicio.show();
+				Players.setLoggedPlayer(SignUp.txtuser.getText());
+				MainMenu.show();
+
 			}
 			else
 			{
