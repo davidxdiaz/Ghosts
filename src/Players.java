@@ -2,7 +2,7 @@
 
 public class Players {
 	private static String loggedPlayer;
-	private static String[][] players = new String[10][2]; //columna 0: user, columna 1: password
+	private static String[][] players = new String[10][3]; //columna 0: index columna 1: user, columna 2: password
 	private static int index = 0; //cuenta el numero de usuarios
 
 	/**
@@ -16,8 +16,9 @@ public class Players {
 	 */
 	public static void add(String user, String pass)
 	{
-		players[index][0] = user;
-		players[index][1] = pass.equals("") ? "password" : pass;
+		players[index][0] = "" + index;
+		players[index][1] = user;
+		players[index][2] = pass.equals("") ? "password" : pass;
 		index++;
 	}
 
@@ -31,13 +32,20 @@ public class Players {
 	 */
 	public static void showPlayers()
 	{
+		System.out.println();
 		for (String[] p : players)
 		{
-			if (p[0] != null)
+			if (p[1] != null)
 			{
-				System.out.println(p[0] + "," + p[1]);
+				System.out.println("+---------------------------+");
+				System.out.println("|" + p[0] + "\t|\t" + p[1] + "\t|\t" + p[2] + "\t|");
+
+
+
+
 			}
 		}
+		System.out.println("+---------------------------+");
 	}
 
 	/**
@@ -59,7 +67,7 @@ public class Players {
 		{
 			if (p[0] != null)
 			{
-				if (p[0].equals(user))
+				if (p[1].equals(user))
 				{
 					b = true;
 					break;
@@ -94,7 +102,7 @@ public class Players {
 		int index = 0;
 		for (int x = 0; x < players.length; x++)
 		{
-			if (players[x][0].equals(user))
+			if (players[x][1].equals(user))
 			{
 				index = x;
 				break;
@@ -111,8 +119,14 @@ public class Players {
 	 */
 	public static void delete(String user) {
 		int index = getPlayerIndex(user);
-		players[index][0] = null;
-		players[index][1] = null;
+
+		for (int i = index; i < players.length - 1; i++)
+		{
+			players[i] = players[i+1];
+			players[i+1][0] = "" + i;
+		}
+		Players.index--;
+
 	}
 
 	/**
@@ -128,7 +142,7 @@ public class Players {
 		{
 			if (p[0] != null)
 			{
-				if (p[0].equals(user) && p[1].equals(passw))
+				if (p[1].equals(user) && p[2].equals(passw))
 				{
 					b = true;
 					break;
