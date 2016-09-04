@@ -222,7 +222,7 @@ public class ListenForButton implements ActionListener
 				String key = b.getName();
 				try
 				{
-					if (Game.firstclic == true)
+					if (Game.firstclic) //PRIMER CLIC, es decir el clic que decide que pieza se mueve
 					{
 
 						System.out.println("PRIMER CLIC");
@@ -230,8 +230,6 @@ public class ListenForButton implements ActionListener
 						Game.y = Integer.parseInt(String.valueOf(key.charAt(2)));
 						System.out.println(Game.ghosts[Game.x][Game.y]);
 
-						//if (Game.ghosts[Game.x][Game.y].getPlayer() == Game.turn)
-						//{
 							if (Game.ghosts[Game.x][Game.y] != null)
 							{
 								Game.firstclic = false;
@@ -240,28 +238,66 @@ public class ListenForButton implements ActionListener
 							{
 								Game.firstclic = true;
 							}
-
-							//Game.paintGhosts();
-						//}
 					}
-					else
+					else //SEGUNDO CLIC, es decir, el clic que decide a donde se mueve la pieza
 					{
 						System.out.println("SEGUNDO CLIC");
 						Game.newx = Integer.parseInt(String.valueOf(key.charAt(0)));
 						Game.newy = Integer.parseInt(String.valueOf(key.charAt(2)));
 
-						//Mueve el fantasma
-						Ghosts g = new Ghosts();
-						g = Game.ghosts[Game.x][Game.y];
-						Game.ghosts[Game.x][Game.y] = null;
-						Game.ghosts[Game.newx][Game.newy] = g;
-						Game.ghosts[Game.newx][Game.newy].setX(Game.newx);
-						Game.ghosts[Game.newx][Game.newy].setY(Game.newy);
+						if (Game.turn) //Turno del player 1
+						{
+							if (Game.ghosts[Game.x][Game.y].getPlayer() == Ghosts.PLAYER_1) //Ficha a mover es de player 1
+							{
+								//Mueve el fantasma
+								Ghosts g = new Ghosts();
+								g = Game.ghosts[Game.x][Game.y];
+								Game.ghosts[Game.x][Game.y] = null;
+								Game.ghosts[Game.newx][Game.newy] = g;
+								Game.ghosts[Game.newx][Game.newy].setX(Game.newx);
+								Game.ghosts[Game.newx][Game.newy].setY(Game.newy);
 
 
-						Game.firstclic = true;
-						Game.paintGhosts();
-						Game.debugDialog();
+								Game.firstclic = true;
+								Game.paintGhosts();
+								Game.debugDialog();
+								Game.turn = false;
+								Game.lblstatus.setText("Turno Jugador 2");
+							}
+							else
+							{
+								JOptionPane.showMessageDialog(null, "No puedes mover esa ficha");
+								Game.firstclic = true;
+								return;
+							}
+						}
+						else //Turno del jugador 2
+						{
+
+							if (Game.ghosts[Game.x][Game.y].getPlayer() == Ghosts.PLAYER_2)
+							{
+								//Mueve el fantasma
+								Ghosts g = new Ghosts();
+								g = Game.ghosts[Game.x][Game.y];
+								Game.ghosts[Game.x][Game.y] = null;
+								Game.ghosts[Game.newx][Game.newy] = g;
+								Game.ghosts[Game.newx][Game.newy].setX(Game.newx);
+								Game.ghosts[Game.newx][Game.newy].setY(Game.newy);
+
+
+								Game.firstclic = true;
+								Game.paintGhosts();
+								Game.debugDialog();
+								Game.turn = true;
+								Game.lblstatus.setText("Turno Jugador 1");
+							}
+							else
+							{
+								JOptionPane.showMessageDialog(null, "No puedes mover esa ficha");
+								Game.firstclic = true;
+								return;
+							}
+						}
 					}
 				} catch (NullPointerException ex)
 				{

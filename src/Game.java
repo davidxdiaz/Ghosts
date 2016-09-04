@@ -25,7 +25,7 @@ public class Game
 	public static ImageIcon icon_bad;
 	public static ImageIcon icon_good;
 	public static String playerTwo = "";
-	public static boolean turn = false;
+	public static boolean turn = true; //Turno de player 1
 	public static JButton ff; //ff significa Forfeit, o give up
 	public static JLabel lblstatus;
 
@@ -87,7 +87,8 @@ public class Game
 
 	public static void Gui()
 	{
-		lblstatus = new JLabel("Listo para jugar");
+		lblstatus = new JLabel("");
+		Game.lblstatus.setText("Turno Jugador 1");
 		ff = new JButton("Rendirse");
 		contentPane = new JPanel(); //Panel principal
 		contentPane.setLayout(new BorderLayout());

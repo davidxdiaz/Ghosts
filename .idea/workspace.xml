@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="735d1698-2aa2-460e-84fd-ce02da54efcf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Ghosts/ListenForButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Ghosts/listenKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Ghosts/windowsEvent.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Game.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Game.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Ghosts/Players.class" afterPath="$PROJECT_DIR$/out/production/Ghosts/Players.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ListenForButton.java" afterPath="$PROJECT_DIR$/src/ListenForButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Players.java" afterPath="$PROJECT_DIR$/src/Players.java" />
     </list>
     <ignored path="Ghosts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +43,8 @@
       <file leaf-file-name="ListenForButton.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ListenForButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="245" column="21" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
+            <state relative-caret-position="238">
+              <caret line="283" column="32" selection-start-line="283" selection-start-column="32" selection-end-line="283" selection-end-column="32" />
               <folding>
                 <element signature="class#listenKey#0" expanded="false" />
                 <element signature="method#keyPressed#0;class#listenKey#0" expanded="false" />
@@ -67,10 +65,11 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="129">
+              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding>
                 <element signature="method#show#0;class#Game#0" expanded="false" />
+                <element signature="method#Gui#0;class#Game#0" expanded="false" />
                 <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
                 <element signature="method#generatePositions#0;class#Game#0" expanded="false" />
                 <element signature="method#paintGhosts#0;class#Game#0" expanded="false" />
@@ -126,9 +125,9 @@
         <option value="$PROJECT_DIR$/src/Ghosts.java" />
         <option value="$PROJECT_DIR$/src/res/contents.html" />
         <option value="$PROJECT_DIR$/src/pruebaplayers.java" />
-        <option value="$PROJECT_DIR$/src/ListenForButton.java" />
         <option value="$PROJECT_DIR$/src/Players.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/ListenForButton.java" />
       </list>
     </option>
   </component>
@@ -220,24 +219,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ghosts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Ghosts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ListenForButton.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -766,7 +747,14 @@
       <option name="project" value="LOCAL" />
       <updated>1472941833620</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Agregado sistema de puntos y funcionalidad de boton rendirse">
+      <created>1472947144422</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1472947144422</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -846,7 +834,8 @@
     <MESSAGE value="Con Comentarios" />
     <MESSAGE value="Players delete actualizado" />
     <MESSAGE value="Crear jugador ahora inicia sesion automaticamente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crear jugador ahora inicia sesion automaticamente" />
+    <MESSAGE value="Agregado sistema de puntos y funcionalidad de boton rendirse" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregado sistema de puntos y funcionalidad de boton rendirse" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1261,20 +1250,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Players.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Ghosts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="809">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="method#getType#0;class#Ghosts#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        <state relative-caret-position="129">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
             <element signature="method#show#0;class#Game#0" expanded="false" />
+            <element signature="method#Gui#0;class#Game#0" expanded="false" />
             <element signature="method#crearTablero#0;class#Game#0" expanded="false" />
             <element signature="method#generatePositions#0;class#Game#0" expanded="false" />
             <element signature="method#paintGhosts#0;class#Game#0" expanded="false" />
@@ -1284,18 +1284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Players.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ListenForButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="245" column="21" selection-start-line="245" selection-start-column="21" selection-end-line="245" selection-end-column="21" />
+        <state relative-caret-position="238">
+          <caret line="283" column="32" selection-start-line="283" selection-start-column="32" selection-end-line="283" selection-end-column="32" />
           <folding>
             <element signature="class#listenKey#0" expanded="false" />
             <element signature="method#keyPressed#0;class#listenKey#0" expanded="false" />
